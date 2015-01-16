@@ -1,0 +1,62 @@
+{% extends "RecoverErecoverBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block recovererecover_body %}
+    <h1>Facture list</h1>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Numero</th>
+                <th>Montan hors Taxe</th>
+                <th>Date Edition</th>
+                <th>Societe</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('facture_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.numero }}</td>
+                <td>{{ entity.montantht }}</td>
+                <td>{% if entity.dateedition %}{{ entity.dateedition|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.societe %}{{ entity.societe }}{% endif %}</td>
+                <td>
+                <!--ul>
+                    <li-->
+                        <a href="{{ path('facture_show', { 'id': entity.id }) }}" class="btn btn-info">show</a>
+                    <!--/li-->
+                    {% if is_granted('ROLE_ADMIN') %}
+                    <!--li-->
+                        <a href="{{ path('facture_edit', { 'id': entity.id }) }}" class="btn btn-info">edit</a>
+                    <!--/li-->
+                    {% endif %}
+                <!--/ul-->
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+       
+    <div class="pagination"> <ul>
+{# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+{% for p in range(1, nombrePage) %}
+<li{% if p == page %} class="active"{% endif %}>
+<a href="{{ path('facture', {'page': p}) }}">{{ p
+}}</a>
+</li>
+{% endfor %} </ul>
+</div>
+ <p>
+            {% if is_granted('ROLE_ADMIN') %}
+            <a class="btn btn-primary btn-large" href="{{ path('facture_new') }}">
+                Create a new entry
+            </a>
+            {% endif %}
+        
+    </p>
+    {% endblock %}

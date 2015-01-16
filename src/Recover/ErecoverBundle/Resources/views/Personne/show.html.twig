@@ -1,0 +1,126 @@
+{% extends "RecoverErecoverBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block recovererecover_body %}
+    <h1>Personne</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ entity.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ entity.nom }}</td>
+            </tr>
+            <tr>
+                <th>Matricule</th>
+                <td>{{ entity.matricule }}</td>
+            </tr>
+            <tr>
+                <th>Datenaissance</th>
+                <td>{{ entity.datenaissance|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Lieunaiss</th>
+                <td>{{ entity.lieuNaiss }}</td>
+            </tr>
+            <tr>
+                <th>Sexe</th>
+                <td>{{ entity.sexe }}</td>
+            </tr>
+            <tr>
+                <th>Civilite</th>
+                <td>{{ entity.civilite }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>{{ entity.photo }}</td>
+            </tr>
+            <tr>
+                <th>Telmobile</th>
+                <td>{{ entity.telMobile }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ entity.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ entity.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Numci</th>
+                <td>{{ entity.numCi }}</td>
+            </tr>
+            <tr>
+                <th>Numpassport</th>
+                <td>{{ entity.numPassport }}</td>
+            </tr>
+            <tr>
+                <th>Nationalite</th>
+                <td>{{ entity.nationalite }}</td>
+            </tr>
+            <tr>
+                <th>Nomcontact</th>
+                <td>{{ entity.nomContact }}</td>
+            </tr>
+            <tr>
+                <th>Prenomcontact</th>
+                <td>{{ entity.prenomContact }}</td>
+            </tr>
+            <tr>
+                <th>Telcontact</th>
+                <td>{{ entity.telContact }}</td>
+            </tr>
+            <tr>
+                <th>Telmobilecontact</th>
+                <td>{{ entity.telMobileContact }}</td>
+            </tr>
+            <tr>
+                <th>Adressecontact</th>
+                <td>{{ entity.adresseContact }}</td>
+            </tr>
+            <tr>
+                <th>Emailcontact</th>
+                <td>{{ entity.emailContact }}</td>
+            </tr>
+            <tr>
+                <th>Permisconduire</th>
+                <td>{{ entity.permisConduire }}</td>
+            </tr>
+            <tr>
+                <th>Numpermisdeconduire</th>
+                <td>{{ entity.numPermisdeconduire }}</td>
+            </tr>
+            <tr>
+                <th>Cv</th>
+                <td>{{ entity.cv }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('personne') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('personne_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

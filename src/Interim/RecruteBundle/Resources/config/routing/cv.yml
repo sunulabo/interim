@@ -1,0 +1,30 @@
+cv:
+    path:     /
+    defaults: { _controller: "InterimRecruteBundle:Cv:index" }
+
+cv_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterimRecruteBundle:Cv:show" }
+
+cv_new:
+    path:     /new
+    defaults: { _controller: "InterimRecruteBundle:Cv:new" }
+
+cv_create:
+    path:     /create
+    defaults: { _controller: "InterimRecruteBundle:Cv:create" }
+    requirements: { _method: post }
+
+cv_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterimRecruteBundle:Cv:edit" }
+
+cv_update:
+    path:     /{id}/update
+    defaults: { _controller: "InterimRecruteBundle:Cv:update" }
+    requirements: { _method: post|put }
+
+cv_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterimRecruteBundle:Cv:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,33 @@
+{% extends '::layout.html.twig' %}
+
+{% block body %}
+
+    <h1>Personne list</h1>
+
+ 
+ 
+ <ul>
+        <li>
+            <a href="{{ path('personne_new') }}">
+              Nouveau
+            </a>
+        </li>
+        
+    </ul>   {{ datatable({
+    
+        'edit_route' : 'personne_edit',
+        'delete_route' : 'personne_delete',
+        'js' : {
+            'sAjaxSource' : path('personne_grid')
+        }
+    })
+}}
+
+        <ul>
+        <li>
+            <a href="{{ path('personne_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+{% endblock %}

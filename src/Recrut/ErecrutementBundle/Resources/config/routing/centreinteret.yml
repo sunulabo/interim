@@ -1,0 +1,30 @@
+centreinteret:
+    path:     /
+    defaults: { _controller: "RecrutErecrutementBundle:CentreInteret:index" }
+
+centreinteret_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecrutErecrutementBundle:CentreInteret:show" }
+
+centreinteret_new:
+    path:     /new
+    defaults: { _controller: "RecrutErecrutementBundle:CentreInteret:new" }
+
+centreinteret_create:
+    path:     /create
+    defaults: { _controller: "RecrutErecrutementBundle:CentreInteret:create" }
+    requirements: { _method: post }
+
+centreinteret_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecrutErecrutementBundle:CentreInteret:edit" }
+
+centreinteret_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecrutErecrutementBundle:CentreInteret:update" }
+    requirements: { _method: post|put }
+
+centreinteret_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecrutErecrutementBundle:CentreInteret:delete" }
+    requirements: { _method: post|delete }

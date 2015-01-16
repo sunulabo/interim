@@ -1,0 +1,79 @@
+{% extends '::layout.html.twig' %}
+
+{% block body %}
+    <h1>Societe list</h1>
+    <ul>
+        <li>
+            <a href="{{ path('societe_new') }}">
+               Nouvelle Societe
+            </a>
+        </li>
+    </ul>
+ <table  id="table_id" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Societe</th>
+                <th>Telephone</th>
+                <th>Email</th>
+                <th>Pays</th>
+                <th>Region</th>
+                <th>Fax</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('societe_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nom }}</td>
+                <td>{{ entity.telephone }}</td>
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.pays }}</td>
+                <td>{{ entity.region }}</td>
+                <td>{{ entity.fax }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('societe_show', { 'id': entity.id }) }}">Voir</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('societe_edit', { 'id': entity.id }) }}">Modifier</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('societe_new') }}">
+                Nouvelle Societe 
+            </a>
+        </li>
+    </ul>
+    
+    <script>
+    
+    $(document).ready( function () {
+    $('#table_id').dataTable( {
+        columnDefs: [ {
+            targets: [ 0 ],
+            orderData: [ 0, 1 ]
+        }, {
+            targets: [ 1 ],
+            orderData: [ 1, 0 ]
+        }, {
+            targets: [ 4 ],
+            orderData: [ 4, 0 ]
+        } ]
+    } );
+    
+} );
+
+
+    </script>
+    {% endblock %}
+

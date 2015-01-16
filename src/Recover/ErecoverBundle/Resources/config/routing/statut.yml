@@ -1,0 +1,30 @@
+statut:
+    path:     /
+    defaults: { _controller: "RecoverErecoverBundle:Statut:index" }
+
+statut_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecoverErecoverBundle:Statut:show" }
+
+statut_new:
+    path:     /new
+    defaults: { _controller: "RecoverErecoverBundle:Statut:new" }
+
+statut_create:
+    path:     /create
+    defaults: { _controller: "RecoverErecoverBundle:Statut:create" }
+    requirements: { _method: post }
+
+statut_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecoverErecoverBundle:Statut:edit" }
+
+statut_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecoverErecoverBundle:Statut:update" }
+    requirements: { _method: post|put }
+
+statut_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecoverErecoverBundle:Statut:delete" }
+    requirements: { _method: post|delete }

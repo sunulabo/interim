@@ -1,0 +1,17 @@
+{% extends "RecoverErecoverBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block recovererecover_body %}
+    <h1>Section creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('section') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

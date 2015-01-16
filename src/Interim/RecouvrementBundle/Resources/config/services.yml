@@ -1,0 +1,7 @@
+parameters:
+#    recouvrement.example.class: Interim\RecouvrementBundle\Example
+
+services:
+#    recouvrement.example:
+#        class: %recouvrement.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

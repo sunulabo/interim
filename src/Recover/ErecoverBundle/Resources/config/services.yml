@@ -1,0 +1,7 @@
+parameters:
+#    recover_erecover.example.class: Recover\ErecoverBundle\Example
+
+services:
+#    recover_erecover.example:
+#        class: %recover_erecover.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

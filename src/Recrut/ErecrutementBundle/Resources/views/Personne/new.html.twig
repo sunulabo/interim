@@ -1,0 +1,18 @@
+{% extends '::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Nouveau Candidat</h1>
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#">
+Personne</a></li><li><a href="#">Contact</a>Formations</li><li><a href="#">Autres</a></li><li><a href="#">Recrutement</a></li><li><a href="#">Parametres</a></li>
+<ul>
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('personnee') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

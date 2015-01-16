@@ -1,0 +1,30 @@
+personnee:
+    path:     /
+    defaults: { _controller: "RecrutErecrutementBundle:Personne:index" }
+
+personnee_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecrutErecrutementBundle:Personne:show" }
+
+personnee_new:
+    path:     /new
+    defaults: { _controller: "RecrutErecrutementBundle:Personne:new" }
+
+personnee_create:
+    path:     /create
+    defaults: { _controller: "RecrutErecrutementBundle:Personne:create" }
+    requirements: { _method: post }
+
+personnee_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecrutErecrutementBundle:Personne:edit" }
+
+personnee_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecrutErecrutementBundle:Personne:update" }
+    requirements: { _method: post|put }
+
+personnee_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecrutErecrutementBundle:Personne:delete" }
+    requirements: { _method: post|delete }

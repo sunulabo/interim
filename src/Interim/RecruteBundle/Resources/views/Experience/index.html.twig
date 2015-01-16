@@ -1,0 +1,58 @@
+{% extends "InterimRecruteBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block interimrecrutebundle_body %}
+
+{% if is_granted('ROLE_AGENT') or  is_granted('ROLE_USER') %}
+    <h1>Experience list</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Datedebut</th>
+                <th>Datefin</th>
+                <th>Intituleposte</th>
+                <th>Entreprise</th>
+                <th>Description</th>
+                <th>Categorie</th>
+                <th>Lieu</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('experience_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{% if entity.dateDebut %}{{ entity.dateDebut|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dateFin %}{{ entity.dateFin|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.intitulePoste }}</td>
+                <td>{{ entity.entreprise }}</td>
+                <td>{{ entity.description }}</td>
+                <td>{{ entity.categorie }}</td>
+                <td>{{ entity.lieu }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('experience_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('experience_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('experience_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endif %}
+    {% endblock %}

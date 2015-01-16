@@ -1,0 +1,93 @@
+interim_recrute_employe:
+    resource: "@InterimRecruteBundle/Resources/config/routing/employe.yml"
+    prefix:   /employe
+
+interim_recrute_absence:
+    resource: "@InterimRecruteBundle/Resources/config/routing/absence.yml"
+    prefix:   /absence
+
+interim_recrute_categorie:
+    resource: "@InterimRecruteBundle/Resources/config/routing/categorie.yml"
+    prefix:   /categorie
+
+interim_recrute_regime:
+    resource: "@InterimRecruteBundle/Resources/config/routing/regime.yml"
+    prefix:   /regime
+
+interim_recrute_convention:
+    resource: "@InterimRecruteBundle/Resources/config/routing/convention.yml"
+    prefix:   /convention
+
+interim_recrute_historique:
+    resource: "@InterimRecruteBundle/Resources/config/routing/historique.yml"
+    prefix:   /historique
+
+interim_recrute_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: InterimRecruteBundle:Default:index }
+      
+InterimRecruteBundle_personne:
+        resource: "@InterimRecruteBundle/Resources/config/routing/personne.yml"
+        prefix:   /personne
+
+InterimRecruteBundle_interimaire:
+        resource: "@InterimRecruteBundle/Resources/config/routing/interimaire.yml"
+        prefix:   /interimaire
+        
+InterimRecruteBundle_centreinteret:
+        resource: "@InterimRecruteBundle/Resources/config/routing/centreinteret.yml"
+        prefix:   /centreinteret
+
+        
+InterimRecruteBundle_competence:
+        resource: "@InterimRecruteBundle/Resources/config/routing/competence.yml"
+        prefix:   /competence
+        
+InterimRecruteBundle_experience:
+        resource: "@InterimRecruteBundle/Resources/config/routing/experience.yml"
+        prefix:   /experience
+
+    
+InterimRecruteBundle_poste:
+        resource: "@InterimRecruteBundle/Resources/config/routing/poste.yml"
+        prefix:   /poste
+        
+        
+InterimRecruteBundle_formation:
+        resource: "@InterimRecruteBundle/Resources/config/routing/formation.yml"
+        prefix:   /formation
+        
+        
+InterimRecruteBundle_langue:
+        resource: "@InterimRecruteBundle/Resources/config/routing/langue.yml"
+        prefix:   /langue
+        
+        
+InterimUserBundle_groupe:
+        resource: "@InterimUserBundle/Resources/config/routing/groupe.yml"
+        prefix:   /groupe
+        
+        
+InterimRecruteBundle_societe:
+        resource: "@InterimRecruteBundle/Resources/config/routing/societe.yml"
+        prefix:   /societe
+        
+InterimRecruteBundle_critere:
+        resource: "@InterimRecruteBundle/Resources/config/routing/critere.yml"
+        prefix:   /critere
+        
+        
+InterimUserBundle_user:
+        resource: "@InterimUserBundle/Resources/config/routing/user.yml"
+        prefix:   /user        
+        
+        
+        
+InterimRecruteBundle_image:
+        resource: "@InterimRecruteBundle/Resources/config/routing/image.yml"
+        prefix:   /image
+        
+        
+InterimRecruteBundle_cv:
+        resource: "@InterimRecruteBundle/Resources/config/routing/cv.yml"
+        prefix:   /cv

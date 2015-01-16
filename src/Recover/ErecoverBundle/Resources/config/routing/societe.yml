@@ -1,0 +1,30 @@
+societe:
+    path:     /
+    defaults: { _controller: "RecoverErecoverBundle:Societe:index" }
+
+societe_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecoverErecoverBundle:Societe:show" }
+
+societe_new:
+    path:     /new
+    defaults: { _controller: "RecoverErecoverBundle:Societe:new" }
+
+societe_create:
+    path:     /create
+    defaults: { _controller: "RecoverErecoverBundle:Societe:create" }
+    requirements: { _method: post }
+
+societe_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecoverErecoverBundle:Societe:edit" }
+
+societe_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecoverErecoverBundle:Societe:update" }
+    requirements: { _method: post|put }
+
+societe_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecoverErecoverBundle:Societe:delete" }
+    requirements: { _method: post|delete }

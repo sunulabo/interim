@@ -1,0 +1,7 @@
+interim_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: InterimUserBundle:Default:index }
+    
+InterimUserBundle_user:
+        resource: "@InterimUserBundle/Resources/config/routing/user.yml"
+        prefix:   /candidats

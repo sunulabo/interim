@@ -1,0 +1,99 @@
+{% extends '::layout.html.twig' %}
+
+
+
+
+
+
+{% block body -%}
+<nav>
+
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#">
+Nouveau</a></li><li><a href="#">Offres Emplois</a></li><li><a href="#">Deposer Offre</a></li><li><a href="#">Recrutement</a></li><li><a href="#">Parametres</a></li>
+<ul>
+
+</nav>
+
+
+    <h1>Liste des demandeurs d'Emplois </h1>
+    
+    <div class="pane">
+    <table>
+    <h1>Recherche</h1>
+  <tr>  
+   <td> Nom ou prenom :<input></input><td>
+ <td>  Sexe <input></input></td>
+    <td>Fonction<input></input></td>
+ <td>  Situation Matrimoniale <input></input></td>
+   <td> Experience<input></input></td>
+    <tr>Rechercher par mots cles :<input></input></tr>
+    </table>
+    </div>
+<div>
+ <ul>
+        <li>
+            <a href="{{ path('personnee_new') }}">
+                Creer
+            </a>
+        </li>
+    <table class="table table-bordered table-condensed">
+        <thead table-condensed >
+            <tr>
+                <th>Id</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+               
+                <th>Civilite</th>
+                <th>Adresse</th>
+               <th>Telfixe</th>
+                <th>Telmobile</th>
+               <th>Fax</th>
+               <th>Email</th>
+                
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody> 
+        {% for entity in entities %}
+            
+            <tr>
+                <td><a href="{{ path('personne_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td><a href="{{ path('personne_show', { 'id': entity.id }) }}">{{ entity.prenom }}</a></td>
+                <td><a href="{{ path('personne_show', { 'id': entity.id }) }}">{{ entity.nom }}</a></td>
+                
+                <td><a href="{{ path('personne_show', { 'id': entity.id }) }}">{{ entity.civilite }}</a></td>
+                <td><a href="{{ path('personne_show', { 'id': entity.id }) }}">{{ entity.adresse }}</a></td>
+                <td><a href="{{ path('personne_show', { 'id': entity.id }) }}">{{ entity.telFixe }}</a></td>
+                <td><a href="{{ path('personne_show', { 'id': entity.id }) }}">{{ entity.telMobile }}</a></td>
+                <td><a href="{{ path('personne_show', { 'id': entity.id }) }}">{{ entity.fax }}</a></td>
+                <td><a href="{{ path('personne_show', { 'id': entity.id }) }}">{{ entity.email }}</a></td>
+                
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('personnee_show', { 'id': entity.id }) }}">Voir</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('personnee_edit', { 'id': entity.id }) }}">Modifier</a>
+                    </li>
+                </ul>
+                
+                </td>
+                
+            </tr>
+            
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+        <ul>
+        <li>
+            <a href="{{ path('personnee_new') }}">
+                Ajouter 
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

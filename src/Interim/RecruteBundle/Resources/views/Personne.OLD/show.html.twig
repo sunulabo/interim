@@ -1,0 +1,158 @@
+{% extends "InterimRecruteBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block interimrecrutebundle_body %}
+    <h1>Personne</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ entity.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ entity.nom }}</td>
+            </tr>
+            <tr>
+                <th>Datenaissance</th>
+                <td>{{ entity.dateNaissance|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Lieunaissance</th>
+                <td>{{ entity.lieuNaissance }}</td>
+            </tr>
+            <tr>
+                <th>Nationalite</th>
+                <td>{{ entity.nationalite }}</td>
+            </tr>
+            <tr>
+                <th>Numeroidentite</th>
+                <td>{{ entity.numeroIdentite }}</td>
+            </tr>
+            <tr>
+                <th>Numpassport</th>
+                <td>{{ entity.numPassport }}</td>
+            </tr>
+            <tr>
+                <th>Sexe</th>
+                <td>{{ entity.sexe }}</td>
+            </tr>
+            <tr>
+                <th>Situationmatrimoniale</th>
+                <td>{{ entity.situationMatrimoniale }}</td>
+            </tr>
+            <tr>
+                <th>Nbfemme</th>
+                <td>{{ entity.nbFemme }}</td>
+            </tr>
+            <tr>
+                <th>Nbenfant</th>
+                <td>{{ entity.nbEnfant }}</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>{{ entity.region }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ entity.ville }}</td>
+            </tr>
+            <tr>
+                <th>Pays</th>
+                <td>{{ entity.pays }}</td>
+            </tr>
+            <tr>
+                <th>Civilite</th>
+                <td>{{ entity.civilite }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ entity.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Telfixe</th>
+                <td>{{ entity.telFixe }}</td>
+            </tr>
+            <tr>
+                <th>Telmobile</th>
+                <td>{{ entity.telMobile }}</td>
+            </tr>
+            <tr>
+                <th>Fax</th>
+                <td>{{ entity.fax }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Numpermisconduire</th>
+                <td>{{ entity.numPermisConduire }}</td>
+            </tr>
+            <tr>
+                <th>Numportarme</th>
+                <td>{{ entity.numPortArme }}</td>
+            </tr>
+            <tr>
+                <th>Niveauetude</th>
+                <td>{{ entity.niveauEtude }}</td>
+            </tr>
+            <tr>
+                <th>Artmartial</th>
+                <td>{{ entity.artMartial }}</td>
+            </tr>
+            <tr>
+                <th>Profession</th>
+                <td>{{ entity.profession }}</td>
+            </tr>
+            <tr>
+                <th>Qualification</th>
+                <td>{{ entity.qualification }}</td>
+            </tr>
+            <tr>
+                <th>Langue</th>
+                <td>{{ entity.langue }}</td>
+            </tr>
+            <tr>
+                <th>Experience</th>
+                <td>{{ entity.experience }}</td>
+            </tr>
+            <tr>
+                <th>Formation</th>
+                <td>{{ entity.formation }}</td>
+            </tr>
+            <tr>
+                <th>Competence</th>
+                <td>{{ entity.competence }}</td>
+            </tr>
+            <tr>
+                <th>Centreinteret</th>
+                <td>{{ entity.centreInteret }}</td>
+            </tr>
+            <tr>
+                <th>Poste</th>
+                <td>{{ entity.poste }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('personne') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('personne_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

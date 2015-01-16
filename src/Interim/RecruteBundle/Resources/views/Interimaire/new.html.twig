@@ -1,0 +1,16 @@
+{% extends '::layout.html.twig' %}
+
+    {% block interimrecrutebundle_body %}
+   <h1>Personne creation</h1>
+
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('interimaire') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

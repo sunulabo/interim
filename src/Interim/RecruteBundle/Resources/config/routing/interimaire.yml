@@ -1,0 +1,36 @@
+interimaire:
+    path:     /
+    defaults: { _controller: "InterimRecruteBundle:Interimaire:index" }
+
+interimaire_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterimRecruteBundle:Interimaire:show" }
+
+interimaire_new:
+    path:     /new
+    defaults: { _controller: "InterimRecruteBundle:Interimaire:new" }
+
+interimaire_create:
+    path:     /create
+    defaults: { _controller: "InterimRecruteBundle:Interimaire:create" }
+    requirements: { _method: post }
+
+interimaire_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterimRecruteBundle:Interimaire:edit" }
+
+interimaire_update:
+    path:     /{id}/update
+    defaults: { _controller: "InterimRecruteBundle:Interimaire:update" }
+    requirements: { _method: post|put }
+
+interimaire_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterimRecruteBundle:Interimaire:delete" }
+    requirements: { _method: post|delete }
+
+interimaire_grid:
+    path:     /grid
+    defaults: { _controller: "InterimRecruteBundle:Interimaire:grid" }
+    #requirements: {_format: (xml|json) , _method: GET}
+    

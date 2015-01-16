@@ -1,0 +1,30 @@
+pays:
+    path:     /
+    defaults: { _controller: "RecoverErecoverBundle:Pays:index" }
+
+pays_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecoverErecoverBundle:Pays:show" }
+
+pays_new:
+    path:     /new
+    defaults: { _controller: "RecoverErecoverBundle:Pays:new" }
+
+pays_create:
+    path:     /create
+    defaults: { _controller: "RecoverErecoverBundle:Pays:create" }
+    requirements: { _method: post }
+
+pays_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecoverErecoverBundle:Pays:edit" }
+
+pays_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecoverErecoverBundle:Pays:update" }
+    requirements: { _method: post|put }
+
+pays_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecoverErecoverBundle:Pays:delete" }
+    requirements: { _method: post|delete }

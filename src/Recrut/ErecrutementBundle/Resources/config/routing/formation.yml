@@ -1,0 +1,30 @@
+formation:
+    path:     /
+    defaults: { _controller: "RecrutErecrutementBundle:Formation:index" }
+
+formation_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecrutErecrutementBundle:Formation:show" }
+
+formation_new:
+    path:     /new
+    defaults: { _controller: "RecrutErecrutementBundle:Formation:new" }
+
+formation_create:
+    path:     /create
+    defaults: { _controller: "RecrutErecrutementBundle:Formation:create" }
+    requirements: { _method: post }
+
+formation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecrutErecrutementBundle:Formation:edit" }
+
+formation_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecrutErecrutementBundle:Formation:update" }
+    requirements: { _method: post|put }
+
+formation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecrutErecrutementBundle:Formation:delete" }
+    requirements: { _method: post|delete }

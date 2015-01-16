@@ -1,0 +1,59 @@
+{% extends "RecoverErecoverBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block recovererecover_body %}
+    <h1>Societe list</h1>
+
+    <table  class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Raison Social</th>
+                <th>Telephone</th>
+                <th>Adresse</th>
+                <!--th>Site Web</th-->
+                <th>Email</th>
+                <th>Fax</th>
+                <!--th>Capital</th>
+                <th>Rc</th>
+                <th>Ninea</th>
+                <th>Actions</th-->
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('societe_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.raisoc }}</td>
+                <td>{{ entity.telephone }}</td>
+                <td>{{ entity.adresse }}</td>
+                <!--td>{# { entity.siteweb }#}</td-->
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.fax }}</td>
+                <!--td>{# { entity.capital } #}</td-->
+                <!--td>{# { entity.rc }#}</td-->
+                <!--td>{#{ entity.ninea } #}</td-->
+                <td>
+                <!--ul>
+                    <li-->
+                        <a href="{{ path('societe_show', { 'id': entity.id }) }}" class="btn btn-info" >show</a>
+                    <!--/li>
+                    <li-->
+                        <a href="{{ path('societe_edit', { 'id': entity.id }) }}" class="btn btn-info">edit</a>
+                    <!--/li>
+                </ul-->
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <!--ul>
+        <li-->
+            <a href="{{ path('societe_new') }}" class="btn btn-primary">
+                Create a new entry
+            </a>
+        <!--/li>
+    </ul-->
+    {% endblock %}

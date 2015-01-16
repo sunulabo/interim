@@ -1,0 +1,65 @@
+{% extends "RecoverErecoverBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block recovererecover_body %}
+    <h1>Societe</h1>
+
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                
+            </tr>
+            <tr>
+                <th>Raison Socialc</th>
+                <td>{{ entity.raisoc }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ entity.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ entity.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Site Web</th>
+                <td>{{ entity.siteweb }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Fax</th>
+                <td>{{ entity.fax }}</td>
+            </tr>
+            <tr>
+                <th>Capital</th>
+                <td>{{ entity.capital }}</td>
+            </tr>
+            <tr>
+                <th>Registre de commerce</th>
+                <td>{{ entity.rc }}</td>
+            </tr>
+            <tr>
+                <th>Ninea</th>
+                <td>{{ entity.ninea }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('societe') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('societe_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

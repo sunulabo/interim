@@ -1,0 +1,32 @@
+facture:
+    path:     /{page}
+    defaults: { _controller: "RecoverErecoverBundle:Facture:index" }
+    requirements:
+       page: \d
+
+facture_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecoverErecoverBundle:Facture:show" }
+
+facture_new:
+    path:     /new
+    defaults: { _controller: "RecoverErecoverBundle:Facture:new" }
+
+facture_create:
+    path:     /create
+    defaults: { _controller: "RecoverErecoverBundle:Facture:create" }
+    requirements: { _method: post }
+
+facture_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecoverErecoverBundle:Facture:edit" }
+
+facture_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecoverErecoverBundle:Facture:update" }
+    requirements: { _method: post|put }
+
+facture_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecoverErecoverBundle:Facture:delete" }
+    requirements: { _method: post|delete }

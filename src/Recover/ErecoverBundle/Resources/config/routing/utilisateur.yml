@@ -1,0 +1,30 @@
+utilisateur:
+    path:     /
+    defaults: { _controller: "RecoverErecoverBundle:Utilisateur:index" }
+
+utilisateur_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecoverErecoverBundle:Utilisateur:show" }
+
+utilisateur_new:
+    path:     /new
+    defaults: { _controller: "RecoverErecoverBundle:Utilisateur:new" }
+
+utilisateur_create:
+    path:     /create
+    defaults: { _controller: "RecoverErecoverBundle:Utilisateur:create" }
+    requirements: { _method: post }
+
+utilisateur_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecoverErecoverBundle:Utilisateur:edit" }
+
+utilisateur_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecoverErecoverBundle:Utilisateur:update" }
+    requirements: { _method: post|put }
+
+utilisateur_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecoverErecoverBundle:Utilisateur:delete" }
+    requirements: { _method: post|delete }

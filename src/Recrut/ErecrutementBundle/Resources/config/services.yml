@@ -1,0 +1,7 @@
+parameters:
+#    recrut_erecrutement.example.class: Recrut\ErecrutementBundle\Example
+
+services:
+#    recrut_erecrutement.example:
+#        class: %recrut_erecrutement.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

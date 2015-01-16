@@ -1,0 +1,21 @@
+{% extends "RecoverErecoverBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block recovererecover_body %}
+    <h1>Etat edit</h1>
+{% if(is_granted("ROLE_ADMIN") )%}
+    {{ form(edit_form) }}
+
+ {% endif %}
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('etat') }}">
+            Back to the list
+        </a>
+    </li>
+    {% if(is_granted("ROLE_ADMIN") )%} 
+    <li>{{ form(delete_form) }}</li>
+  {% endif %}
+</ul>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends '::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Liste des Annonces </h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Datelimite</th>
+                <th>Datefonction</th>
+                <th>Salaire</th>
+                <th>Avantage</th>
+                <th>Tache</th>
+                <th>Mission</th>
+                <th>Objectif</th>
+                <th>Societe</th>
+                <th>Critere</th>
+                <th>Competence</th>
+                <th>Centreinteret</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('poste_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.titre }}</td>
+                <td>{{ entity.description }}</td>
+                <td>{% if entity.dateLimite %}{{ entity.dateLimite|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dateFonction %}{{ entity.dateFonction|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.salaire }}</td>
+                <td>{{ entity.avantage }}</td>
+                <td>{{ entity.tache }}</td>
+                <td>{{ entity.mission }}</td>
+                <td>{{ entity.objectif }}</td>
+                <td>{{ entity.societe }}</td>
+                <td>{{ entity.critere }}</td>
+                <td>{{ entity.competence }}</td>
+                <td>{{ entity.centreInteret }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('poste_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('poste_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('poste_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

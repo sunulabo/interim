@@ -1,0 +1,25 @@
+{% extends "RecoverErecoverBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+
+    {% block menu %}
+
+<ul class="nav nav-pills nav-stacked">
+{% if(is_granted("ROLE_ADMIN") or is_granted("ROLE_AGENT") or is_granted("ROLE_SOCIETE") )%}
+<li><a href="{{ path('recover_erecover_homepage') }}">Accueil</a></li>
+<li><a href="{{ path('facture', {'page':1}) }}">facture</a></li>
+
+ {% endif %}
+ 
+{% if is_granted('ROLE_ADMIN') %}
+<li><a href="{{ path('societe') }}">Nouvelle Societe</a></li>
+<li><a href="{{ path('section') }}">Nouvelle Section</a></li>
+<li><a href="{{ path('statut') }}">Nouveau Statut Societe</a></li>
+<li><a href="{{ path('etat') }}">Nouveau Etat Facture</a></li>
+<li><a href="{{ path('tva') }}">Enregistrer TVA</a></li>
+
+ {% endif %}
+
+</ul>
+{% endblock %}

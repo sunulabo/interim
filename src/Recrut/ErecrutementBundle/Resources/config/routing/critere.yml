@@ -1,0 +1,30 @@
+critere:
+    path:     /
+    defaults: { _controller: "RecrutErecrutementBundle:Critere:index" }
+
+critere_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecrutErecrutementBundle:Critere:show" }
+
+critere_new:
+    path:     /new
+    defaults: { _controller: "RecrutErecrutementBundle:Critere:new" }
+
+critere_create:
+    path:     /create
+    defaults: { _controller: "RecrutErecrutementBundle:Critere:create" }
+    requirements: { _method: post }
+
+critere_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecrutErecrutementBundle:Critere:edit" }
+
+critere_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecrutErecrutementBundle:Critere:update" }
+    requirements: { _method: post|put }
+
+critere_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecrutErecrutementBundle:Critere:delete" }
+    requirements: { _method: post|delete }

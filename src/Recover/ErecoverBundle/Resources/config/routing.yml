@@ -1,0 +1,57 @@
+recover_erecover_homepage:
+    path:     /
+    defaults: { _controller: RecoverErecoverBundle:Default:index }
+    
+RecoverErecoverBundle_personne:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/personne.yml"
+        prefix:   /personne
+    
+RecoverErecoverBundle_societe:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/societe.yml"
+        prefix:   /societe
+        
+RecoverErecoverBundle_parametre:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/parametre.yml"
+        prefix:   /parametre
+        
+RecoverErecoverBundle_section:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/section.yml"
+        prefix:   /section
+        
+RecoverErecoverBundle_image:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/image.yml"
+        prefix:   /image
+        
+RecoverErecoverBundle_facture:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/facture.yml"
+        prefix:   /facture
+        
+RecoverErecoverBundle_etat:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/etat.yml"
+        prefix:   /etat
+        
+RecoverErecoverBundle_tva:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/tva.yml"
+        prefix:   /tva
+        
+RecoverErecoverBundle_role:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/role.yml"
+        prefix:   /role
+        
+RecoverErecoverBundle_utilisateur:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/utilisateur.yml"
+        prefix:   /utilisateur
+        
+RecoverErecoverBundle_rubrique:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/rubrique.yml"
+        prefix:   /rubrique
+        
+RecoverErecoverBundle_menu:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/menu.yml"
+        prefix:   /menu
+RecoverErecoverBundle_pays:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/pays.yml"
+        prefix:   /pays
+RecoverErecoverBundle_statut:
+        resource: "@RecoverErecoverBundle/Resources/config/routing/statut.yml"
+        prefix:   /statut

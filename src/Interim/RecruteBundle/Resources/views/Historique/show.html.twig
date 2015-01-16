@@ -1,0 +1,96 @@
+{% extends '::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Historique</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nomentreprise</th>
+                <td>{{ entity.nomEntreprise }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ entity.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ entity.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Datenaissance</th>
+                <td>{{ entity.dateNaissance }}</td>
+            </tr>
+            <tr>
+                <th>Lieunaissance</th>
+                <td>{{ entity.lieuNaissance }}</td>
+            </tr>
+            <tr>
+                <th>Fonction</th>
+                <td>{{ entity.fonction }}</td>
+            </tr>
+            <tr>
+                <th>Datedebutperiodeconge</th>
+                <td>{{ entity.datedebutPeriodeConge|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Datefinperiodeconge</th>
+                <td>{{ entity.datefinPeriodeConge|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Datedebutabsence</th>
+                <td>{{ entity.dateDebutAbsence|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Datefinabsence</th>
+                <td>{{ entity.dateFinAbsence|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Nbjabsence</th>
+                <td>{{ entity.nbjAbsence }}</td>
+            </tr>
+            <tr>
+                <th>Commentaire</th>
+                <td>{{ entity.commentaire }}</td>
+            </tr>
+            <tr>
+                <th>Commentairerh</th>
+                <td>{{ entity.commentaireRH }}</td>
+            </tr>
+            <tr>
+                <th>Sanction</th>
+                <td>{{ entity.sanction }}</td>
+            </tr>
+            <tr>
+                <th>Objet</th>
+                <td>{{ entity.objet }}</td>
+            </tr>
+            <tr>
+                <th>Societe</th>
+                <td>{{ entity.societe }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('historique') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('historique_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

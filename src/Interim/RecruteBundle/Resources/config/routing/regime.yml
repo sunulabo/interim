@@ -1,0 +1,30 @@
+regime:
+    path:     /
+    defaults: { _controller: "InterimRecruteBundle:Regime:index" }
+
+regime_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterimRecruteBundle:Regime:show" }
+
+regime_new:
+    path:     /new
+    defaults: { _controller: "InterimRecruteBundle:Regime:new" }
+
+regime_create:
+    path:     /create
+    defaults: { _controller: "InterimRecruteBundle:Regime:create" }
+    requirements: { _method: post }
+
+regime_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterimRecruteBundle:Regime:edit" }
+
+regime_update:
+    path:     /{id}/update
+    defaults: { _controller: "InterimRecruteBundle:Regime:update" }
+    requirements: { _method: post|put }
+
+regime_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterimRecruteBundle:Regime:delete" }
+    requirements: { _method: post|delete }

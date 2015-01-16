@@ -1,0 +1,30 @@
+tva:
+    path:     /
+    defaults: { _controller: "RecoverErecoverBundle:Tva:index" }
+
+tva_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecoverErecoverBundle:Tva:show" }
+
+tva_new:
+    path:     /new
+    defaults: { _controller: "RecoverErecoverBundle:Tva:new" }
+
+tva_create:
+    path:     /create
+    defaults: { _controller: "RecoverErecoverBundle:Tva:create" }
+    requirements: { _method: post }
+
+tva_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecoverErecoverBundle:Tva:edit" }
+
+tva_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecoverErecoverBundle:Tva:update" }
+    requirements: { _method: post|put }
+
+tva_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecoverErecoverBundle:Tva:delete" }
+    requirements: { _method: post|delete }

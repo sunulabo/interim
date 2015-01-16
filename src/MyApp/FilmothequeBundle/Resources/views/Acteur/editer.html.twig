@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MyAppFilmothequeBundle:Acteur:ajouter{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Acteur:ajouter page</h1>
+{% if message %}
+<p>{{message}}
+{% endif%}
+<form action="" method="post" {{form_enctype(form)}}>
+{{form_widget(form)}}
+<input type="submit"/>
+</form>
+<p><a href="{{ path('myapp_acteur_lister') }}">Retour a la liste des acteurs</a></p>
+{% endblock %}

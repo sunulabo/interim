@@ -1,0 +1,30 @@
+competence:
+    path:     /
+    defaults: { _controller: "InterimRecruteBundle:Competence:index" }
+
+competence_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterimRecruteBundle:Competence:show" }
+
+competence_new:
+    path:     /new
+    defaults: { _controller: "InterimRecruteBundle:Competence:new" }
+
+competence_create:
+    path:     /create
+    defaults: { _controller: "InterimRecruteBundle:Competence:create" }
+    requirements: { _method: post }
+
+competence_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterimRecruteBundle:Competence:edit" }
+
+competence_update:
+    path:     /{id}/update
+    defaults: { _controller: "InterimRecruteBundle:Competence:update" }
+    requirements: { _method: post|put }
+
+competence_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterimRecruteBundle:Competence:delete" }
+    requirements: { _method: post|delete }

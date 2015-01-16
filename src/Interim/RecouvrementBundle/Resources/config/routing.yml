@@ -1,0 +1,3 @@
+recouvrement_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: RecouvrementBundle:Default:index }

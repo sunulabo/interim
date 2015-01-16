@@ -1,0 +1,30 @@
+experience:
+    path:     /
+    defaults: { _controller: "InterimRecruteBundle:Experience:index" }
+
+experience_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterimRecruteBundle:Experience:show" }
+
+experience_new:
+    path:     /new
+    defaults: { _controller: "InterimRecruteBundle:Experience:new" }
+
+experience_create:
+    path:     /create
+    defaults: { _controller: "InterimRecruteBundle:Experience:create" }
+    requirements: { _method: post }
+
+experience_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterimRecruteBundle:Experience:edit" }
+
+experience_update:
+    path:     /{id}/update
+    defaults: { _controller: "InterimRecruteBundle:Experience:update" }
+    requirements: { _method: post|put }
+
+experience_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterimRecruteBundle:Experience:delete" }
+    requirements: { _method: post|delete }

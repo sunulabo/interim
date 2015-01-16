@@ -1,0 +1,30 @@
+rubrique:
+    path:     /
+    defaults: { _controller: "RecoverErecoverBundle:Rubrique:index" }
+
+rubrique_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecoverErecoverBundle:Rubrique:show" }
+
+rubrique_new:
+    path:     /new
+    defaults: { _controller: "RecoverErecoverBundle:Rubrique:new" }
+
+rubrique_create:
+    path:     /create
+    defaults: { _controller: "RecoverErecoverBundle:Rubrique:create" }
+    requirements: { _method: post }
+
+rubrique_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecoverErecoverBundle:Rubrique:edit" }
+
+rubrique_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecoverErecoverBundle:Rubrique:update" }
+    requirements: { _method: post|put }
+
+rubrique_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecoverErecoverBundle:Rubrique:delete" }
+    requirements: { _method: post|delete }

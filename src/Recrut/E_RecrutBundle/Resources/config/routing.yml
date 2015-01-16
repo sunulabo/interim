@@ -1,0 +1,3 @@
+recrut_e.recrut_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: RecrutE_RecrutBundle:Default:index }

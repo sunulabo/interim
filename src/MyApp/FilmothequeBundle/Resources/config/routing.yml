@@ -1,0 +1,19 @@
+myapp_accueil:
+    pattern:     /
+    defaults: { _controller: MyAppFilmothequeBundle:Default:index }
+
+myapp_acteur_lister:
+    path:     /acteur
+    defaults: { _controller: MyAppFilmothequeBundle:Acteur:lister }
+
+myapp_acteur_ajouter:
+    path:     /acteur/ajouter
+    defaults: { _controller: MyAppFilmothequeBundle:Acteur:editer }
+
+myapp_acteur_modifier:
+    path:     /acteur/modifier/{id}
+    defaults: { _controller: MyAppFilmothequeBundle:Acteur:editer }
+
+myapp_acteur_supprimer:
+    path:     /acteur/supprimer/{id}
+    defaults: { _controller: MyAppFilmothequeBundle:Acteur:supprimer }

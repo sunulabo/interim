@@ -1,0 +1,33 @@
+poste:
+    path:     /
+    defaults: { _controller: "InterimRecruteBundle:Poste:index" }
+
+poste_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterimRecruteBundle:Poste:show" }
+
+poste_new:
+    path:     /new
+    defaults: { _controller: "InterimRecruteBundle:Poste:new" }
+
+poste_create:
+    path:     /create
+    defaults: { _controller: "InterimRecruteBundle:Poste:create" }
+    requirements: { _method: post }
+
+poste_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterimRecruteBundle:Poste:edit" }
+
+poste_update:
+    path:     /{id}/update
+    defaults: { _controller: "InterimRecruteBundle:Poste:update" }
+    requirements: { _method: post|put }
+
+poste_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterimRecruteBundle:Poste:delete" }
+    requirements: { _method: post|delete }
+
+
+    

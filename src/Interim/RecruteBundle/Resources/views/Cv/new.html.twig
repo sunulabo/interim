@@ -1,0 +1,17 @@
+{% extends "InterimRecruteBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block interimrecrutebundle_body %}
+    <h1>Cv creation</h1>
+
+    {{ form(form)   }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('cv') }}">
+            Liste des cv 
+        </a>
+    </li>
+</ul>
+{% endblock %}

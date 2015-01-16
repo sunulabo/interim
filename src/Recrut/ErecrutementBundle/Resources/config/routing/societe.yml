@@ -1,0 +1,30 @@
+societe:
+    path:     /
+    defaults: { _controller: "RecrutErecrutementBundle:Societe:index" }
+
+societe_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecrutErecrutementBundle:Societe:show" }
+
+societe_new:
+    path:     /new
+    defaults: { _controller: "RecrutErecrutementBundle:Societe:new" }
+
+societe_create:
+    path:     /create
+    defaults: { _controller: "RecrutErecrutementBundle:Societe:create" }
+    requirements: { _method: post }
+
+societe_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecrutErecrutementBundle:Societe:edit" }
+
+societe_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecrutErecrutementBundle:Societe:update" }
+    requirements: { _method: post|put }
+
+societe_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecrutErecrutementBundle:Societe:delete" }
+    requirements: { _method: post|delete }

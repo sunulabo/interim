@@ -1,0 +1,54 @@
+{% extends '::layout.html.twig' %}
+
+
+{% block body -%}
+    <h1>Absence list</h1>
+
+    <table class="records_list" id="table_id" class="display" >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Datedepart</th>
+                <th>Dateretour</th>
+                <th>Objet</th>
+                <th>Etat</th>
+                <th>Commentaire</th>
+                <th>Nbrejour</th>
+                <th>Commentairerh</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('absence_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{% if entity.dateDepart %}{{ entity.dateDepart|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dateRetour %}{{ entity.dateRetour|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.objet }}</td>
+                <td>{{ entity.etat }}</td>
+                <td>{{ entity.commentaire }}</td>
+                <td>{{ entity.nbrejour }}</td>
+                <td>{{ entity.commentaireRH }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('absence_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('absence_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('absence_new') }}">
+                Ajouter Absence
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

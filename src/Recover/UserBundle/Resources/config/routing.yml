@@ -1,0 +1,4 @@
+recover_user_user:
+    resource: "@RecoverUserBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+

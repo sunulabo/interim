@@ -1,0 +1,30 @@
+role:
+    path:     /
+    defaults: { _controller: "RecoverErecoverBundle:Role:index" }
+
+role_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecoverErecoverBundle:Role:show" }
+
+role_new:
+    path:     /new
+    defaults: { _controller: "RecoverErecoverBundle:Role:new" }
+
+role_create:
+    path:     /create
+    defaults: { _controller: "RecoverErecoverBundle:Role:create" }
+    requirements: { _method: post }
+
+role_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecoverErecoverBundle:Role:edit" }
+
+role_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecoverErecoverBundle:Role:update" }
+    requirements: { _method: post|put }
+
+role_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecoverErecoverBundle:Role:delete" }
+    requirements: { _method: post|delete }

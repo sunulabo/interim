@@ -1,0 +1,30 @@
+section:
+    path:     /
+    defaults: { _controller: "RecoverErecoverBundle:Section:index" }
+
+section_show:
+    path:     /{id}/show
+    defaults: { _controller: "RecoverErecoverBundle:Section:show" }
+
+section_new:
+    path:     /new
+    defaults: { _controller: "RecoverErecoverBundle:Section:new" }
+
+section_create:
+    path:     /create
+    defaults: { _controller: "RecoverErecoverBundle:Section:create" }
+    requirements: { _method: post }
+
+section_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RecoverErecoverBundle:Section:edit" }
+
+section_update:
+    path:     /{id}/update
+    defaults: { _controller: "RecoverErecoverBundle:Section:update" }
+    requirements: { _method: post|put }
+
+section_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RecoverErecoverBundle:Section:delete" }
+    requirements: { _method: post|delete }

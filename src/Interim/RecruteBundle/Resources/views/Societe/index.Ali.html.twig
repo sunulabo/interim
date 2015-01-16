@@ -1,0 +1,23 @@
+{% extends '::layout.html.twig' %}
+
+{% block body %}
+    <h1>Societe list</h1>
+
+      {{ datatable({
+    
+        'edit_route' : 'societe_edit',
+        'delete_route' : 'societe_delete',
+        'js' : {
+            'sAjaxSource' : path('societe_grid')
+        }
+    })
+}}
+
+        <ul>
+        <li>
+            <a href="{{ path('societe_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

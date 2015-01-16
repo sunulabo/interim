@@ -1,0 +1,30 @@
+convention:
+    path:     /
+    defaults: { _controller: "InterimRecruteBundle:Convention:index" }
+
+convention_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterimRecruteBundle:Convention:show" }
+
+convention_new:
+    path:     /new
+    defaults: { _controller: "InterimRecruteBundle:Convention:new" }
+
+convention_create:
+    path:     /create
+    defaults: { _controller: "InterimRecruteBundle:Convention:create" }
+    requirements: { _method: post }
+
+convention_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterimRecruteBundle:Convention:edit" }
+
+convention_update:
+    path:     /{id}/update
+    defaults: { _controller: "InterimRecruteBundle:Convention:update" }
+    requirements: { _method: post|put }
+
+convention_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterimRecruteBundle:Convention:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,45 @@
+recrut_erecrutement_homepage:
+    path:     /
+    defaults: { _controller: RecrutErecrutementBundle:Default:index }
+
+RecrutErecrutementBundle_personne:
+        resource: "@RecrutErecrutementBundle/Resources/config/routing/personnee.yml"
+        prefix:   /personnee
+
+        
+RecrutErecrutementBundle_poste:
+        resource: "@RecrutErecrutementBundle/Resources/config/routing/poste.yml"
+        prefix:   /poste
+        
+RecrutErecrutementBundle_societe:
+        resource: "@RecrutErecrutementBundle/Resources/config/routing/societe.yml"
+        prefix:   /societe
+        
+RecrutErecrutementBundle_critere:
+        resource: "@RecrutErecrutementBundle/Resources/config/routing/critere.yml"
+        prefix:   /critere
+        
+        
+RecrutErecrutementBundle_competence:
+        resource: "@RecrutErecrutementBundle/Resources/config/routing/competence.yml"
+        prefix:   /competence
+        
+        
+RecrutErecrutementBundle_formation:
+        resource: "@RecrutErecrutementBundle/Resources/config/routing/formation.yml"
+        prefix:   /formation
+        
+        
+RecrutErecrutementBundle_experience:
+        resource: "@RecrutErecrutementBundle/Resources/config/routing/experience.yml"
+        prefix:   /experience
+        
+        
+RecrutErecrutementBundle_langue:
+        resource: "@RecrutErecrutementBundle/Resources/config/routing/langue.yml"
+        prefix:   /langue
+        
+        
+RecrutErecrutementBundle_centreinteret:
+        resource: "@RecrutErecrutementBundle/Resources/config/routing/centreinteret.yml"
+        prefix:   /centreinteret

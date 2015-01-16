@@ -1,0 +1,30 @@
+langue:
+    path:     /
+    defaults: { _controller: "InterimRecruteBundle:Langue:index" }
+
+langue_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterimRecruteBundle:Langue:show" }
+
+langue_new:
+    path:     /new
+    defaults: { _controller: "InterimRecruteBundle:Langue:new" }
+
+langue_create:
+    path:     /create
+    defaults: { _controller: "InterimRecruteBundle:Langue:create" }
+    requirements: { _method: post }
+
+langue_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterimRecruteBundle:Langue:edit" }
+
+langue_update:
+    path:     /{id}/update
+    defaults: { _controller: "InterimRecruteBundle:Langue:update" }
+    requirements: { _method: post|put }
+
+langue_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterimRecruteBundle:Langue:delete" }
+    requirements: { _method: post|delete }

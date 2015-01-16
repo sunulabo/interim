@@ -1,0 +1,48 @@
+<form method="post" id="{{_form}}" class="payment-form">
+
+<p class="payment-summary">
+	<span class="payment-description">{% if plan %}{"Plan"}: {% end %}{{description}}</span>
+	<span class="payment-amount">
+		${{amount|stripe\Util::money_format}}{% if interval %} {{interval}}{% end %}
+	</span>
+</p>
+
+<p class="payment-errors"></p>
+
+{% if customer %}
+<p>
+	<input type="radio" name="existing" value="yes" checked />
+	<label>{"Use existing card"} (**** **** **** {{cc_last4}} - {{cc_type}})</label>
+</p>
+
+<p>
+	<input type="radio" name="existing" value="no" />
+	<label>{"Use a new card"}:</label>
+</p>
+{% end %}
+
+<p>
+	<label>{"Card number"}:</label>
+	<input type="text" size="30" data-stripe="number" />
+</p>
+
+<p>
+	<label>{"Name on card"}:</label>
+	<input type="text" size="30" data-stripe="name" />
+</p>
+
+<p>
+	<label>{"Expiration"}:</label>
+	<input type="text" size="2" data-stripe="exp-month" placeholder="mm" />
+	<span> / </span>
+    <input type="text" size="4" data-stripe="exp-year" placeholder="yyyy" />
+</p>
+
+<p>
+	<label>{"CVC"}:</label>
+	<input type="text" size="4" data-stripe="cvc" />
+</p>
+
+<p><button type="submit">{"Submit Payment"}</button></p>
+
+</form>

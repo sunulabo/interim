@@ -1,0 +1,19 @@
+{% extends "RecoverErecoverBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block recovererecover_body %}
+    <h1>Facture creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('facture', {'page':1}) }}" class="btn">
+        	<i class="icon-chevron-left"></i>
+            Back to the list
+        </a>
+    </li>
+</ul>
+
+{% endblock %}

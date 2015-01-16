@@ -1,0 +1,37 @@
+{% extends '::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Personne list Ussssssser</h1>
+    
+    
+    <table  id="table_id" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('fos_user_profile_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.prenom }}</td>
+                <td>{{ entity.nom }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('fos_user_profile_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('fos_user_profile_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+    {% endblock %}

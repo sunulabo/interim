@@ -1,0 +1,120 @@
+{% extends "InterimRecruteBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block interimrecrutebundle_body %}
+    <h1>Rechercher</h1>
+
+
+<div class="form-group">
+<form role="form" >
+<input type='search' name='search' placeholder='Rechercher par nom ou prenom '>
+</input>
+
+</form>
+
+
+<form role="form">
+<input type='text' name='search' placeholder='Rechercher par Prenom'>
+</input>
+</form>
+
+<form role="form">
+<input type='text' name='searchProfession' placeholder='Rechercher par Profession'>
+</input>
+</form>
+
+<form role="form">
+<input type='text' name='searchSexe' placeholder='Rechercher par Sexe '>
+</input>
+</form>
+
+</div>
+ 
+ <div class="form-group"> 
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+               
+                <th></th>
+                <th>Civilite</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Date de Naissance</th>
+                <th>Lieu de Naissance</th>
+                <th>Nationalite</th>
+                <th>Sexe</th>
+                <th>Situation Matrimoniale</th>
+                <th>Pays</th>
+                <th>Profession</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><input type="checkbox" class></input></td>
+                <td><a href="{{ path('personne_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.civilite }}</td>
+                <td>{{ entity.prenom }}</td>
+                <td>{{ entity.nom }}</td>
+                <td>{% if entity.dateNaissance %}{{ entity.dateNaissance|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.lieuNaissance }}</td>
+                <td>{{ entity.nationalite }}</td>
+             
+                <td>{{ entity.sexe }}</td>
+                <td>{{ entity.situationMatrimoniale }}</td>
+               
+               
+               
+                <td>{{ entity.pays }}</td>
+                
+                
+                
+               
+                
+                <td>{{ entity.profession }}</td>
+               
+                
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('personne_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('personne_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('personne_new') }}">
+                Nouveau Candidat
+            </a>
+        </li>
+    </ul>
+    </div>
+    
+    <!-- include the assets -->
+<link href="{{ asset('bundles/alidatatable/css/demo_table.css') }}" type="text/css" rel="stylesheet" />
+<link href="{{ asset('bundles/alidatatable/css/smoothness/jquery-ui-1.8.4.custom.css') }}" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="{{ asset('bundles/alidatatable/js/jquery.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/alidatatable/js/jquery.datatable.inc.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/alidatatable/js/jquery.dataTables.min.js') }}"></script>    
+
+{{ datatable({ 
+        'edit_route' : 'personne_edit',
+        'delete_route' : 'personne_delete',
+        'js' : {
+            'sAjaxSource' : path('personne_grid')
+        }
+    })
+}}
+    {% endblock %}

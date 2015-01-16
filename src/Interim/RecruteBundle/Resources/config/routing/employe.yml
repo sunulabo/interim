@@ -1,0 +1,30 @@
+employe:
+    path:     /
+    defaults: { _controller: "InterimRecruteBundle:Employe:index" }
+
+employe_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterimRecruteBundle:Employe:show" }
+
+employe_new:
+    path:     /new
+    defaults: { _controller: "InterimRecruteBundle:Employe:new" }
+
+employe_create:
+    path:     /create
+    defaults: { _controller: "InterimRecruteBundle:Employe:create" }
+    requirements: { _method: post }
+
+employe_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterimRecruteBundle:Employe:edit" }
+
+employe_update:
+    path:     /{id}/update
+    defaults: { _controller: "InterimRecruteBundle:Employe:update" }
+    requirements: { _method: post|put }
+
+employe_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterimRecruteBundle:Employe:delete" }
+    requirements: { _method: post|delete }

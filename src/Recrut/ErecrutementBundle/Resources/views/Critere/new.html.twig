@@ -1,0 +1,15 @@
+{% extends '::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Critere creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('critere') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

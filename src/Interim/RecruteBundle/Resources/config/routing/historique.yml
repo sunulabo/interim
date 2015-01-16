@@ -1,0 +1,30 @@
+historique:
+    path:     /
+    defaults: { _controller: "InterimRecruteBundle:Historique:index" }
+
+historique_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterimRecruteBundle:Historique:show" }
+
+historique_new:
+    path:     /new
+    defaults: { _controller: "InterimRecruteBundle:Historique:new" }
+
+historique_create:
+    path:     /create
+    defaults: { _controller: "InterimRecruteBundle:Historique:create" }
+    requirements: { _method: post }
+
+historique_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterimRecruteBundle:Historique:edit" }
+
+historique_update:
+    path:     /{id}/update
+    defaults: { _controller: "InterimRecruteBundle:Historique:update" }
+    requirements: { _method: post|put }
+
+historique_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterimRecruteBundle:Historique:delete" }
+    requirements: { _method: post|delete }

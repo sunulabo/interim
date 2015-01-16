@@ -1,0 +1,73 @@
+{% extends '::layout.html.twig' %}
+
+{% block body -%}
+    <h1>Historique list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomentreprise</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Datenaissance</th>
+                <th>Lieunaissance</th>
+                <th>Fonction</th>
+                <th>Datedebutperiodeconge</th>
+                <th>Datefinperiodeconge</th>
+                <th>Email</th>
+                <th>Datedebutabsence</th>
+                <th>Datefinabsence</th>
+                <th>Nbjabsence</th>
+                <th>Commentaire</th>
+                <th>Commentairerh</th>
+                <th>Sanction</th>
+                <th>Objet</th>
+                <th>Societe</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('historique_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nomEntreprise }}</td>
+                <td>{{ entity.nom }}</td>
+                <td>{{ entity.prenom }}</td>
+                <td>{{ entity.dateNaissance }}</td>
+                <td>{{ entity.lieuNaissance }}</td>
+                <td>{{ entity.fonction }}</td>
+                <td>{% if entity.datedebutPeriodeConge %}{{ entity.datedebutPeriodeConge|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.datefinPeriodeConge %}{{ entity.datefinPeriodeConge|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.email }}</td>
+                <td>{% if entity.dateDebutAbsence %}{{ entity.dateDebutAbsence|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dateFinAbsence %}{{ entity.dateFinAbsence|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.nbjAbsence }}</td>
+                <td>{{ entity.commentaire }}</td>
+                <td>{{ entity.commentaireRH }}</td>
+                <td>{{ entity.sanction }}</td>
+                <td>{{ entity.objet }}</td>
+                <td>{{ entity.societe }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('historique_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('historique_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('historique_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

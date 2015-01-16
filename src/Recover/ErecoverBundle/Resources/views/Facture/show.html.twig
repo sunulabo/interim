@@ -1,0 +1,57 @@
+{% extends "RecoverErecoverBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block recovererecover_body %}
+    <h1>Facture</h1>
+
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <th>Societe</th>
+                <td>{{ entity.societe }}</td>
+            </tr>
+            <tr>
+                <th>Numero:</th>
+                <td>{{ entity.numero }}</td>
+            </tr>
+            <tr>
+                <th>Montant Hors Taches:</th>
+                <td>{{ entity.montantht }}</td>
+            </tr>
+            <tr>
+                <th>Date Edition:</th>
+                <td>{{ entity.dateedition|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                {% if entity.image %}
+                <img 
+                src="{{asset(entity.image.uploadDir~'/'~entity.image.id~'.'~entity.image.url)}}"
+                alt="{{entity.image.alt}}"
+                class="img-thumbnail"
+                />
+                {% endif %}
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('facture', {'page':1}) }}" class="btn">
+        	<i class="icon-chevron-left"></i>
+            Back to the list
+        </a>
+    </li>
+    {% if is_granted('ROLE_ADMIN') %}
+    <li>
+    
+        <a href="{{ path('facture_edit', { 'id': entity.id }) }}" class="btn">
+        	<i class="icon-chevron-edit"></i>
+            Edit
+        </a>
+    </li>
+   
+    <li>{{ form(delete_form) }}</li>
+     {% endif  %}
+</ul>
+{% endblock %}
